@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Planificador de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Time Master</h1>
+    <p class="center-text">Agrega tus actividades diarias con el tiempo estimado para completarlas. Una vez que hayas ingresado todas las tareas, haz clic en 'Generar Plan' para organizar tu día.</p>
+    
+    <div class="container">
+        <!-- Contenido principal -->
+        <div class="main-content">
+            <form id="taskForm">
+                <input type="text" id="taskName" placeholder="Tarea" required>
+                <input type="number" id="taskHours" placeholder="Horas" required>
+                <input type="number" id="taskMinutes" placeholder="Minutos" required>
+                <p>Hora específica para realizar actividad (si aplica)</p>
+                <input type="time" id="taskSpecificTime" placeholder="Hora Específica">
+                <button type="submit">Agregar Tarea</button>
+                <p>Ingresa el tiempo que tienes para realizar todas las actividades ingresadas</p>
+            </form>
+            
+            <div class="time-container">
+                <label for="startHour">Hora de inicio:</label>
+                <input type="time" id="startHour" required>
+                <label for="endHour">Hora de fin:</label>
+                <input type="time" id="endHour" required>
+                <button id="generatePlan">Generar Plan</button>
+            </div>
+            
+            <div id="schedule"></div>
+        </div>
+        
+        <!-- Lista de tareas -->
+        <div class="task-list">
+            <h2>Lista de Tareas</h2>
+            <ul id="taskList">
+                <!-- Las tareas se agregarán aquí -->
+            </ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
