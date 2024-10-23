@@ -15,6 +15,7 @@ body {
     background-position: center center;
     background-attachment: fixed;
     background-color: rgba(255, 255, 255, 0.8); /* Blanco con 80% de opacidad */
+    min-height: 100vh;
 }
 
 /* Encabezado */
@@ -115,4 +116,32 @@ input, button {
 
 .task-list button:hover {
     background-color: #d32f2f; /* Rojo oscuro al pasar el ratón */
+}
+
+/* Media queries para pantallas pequeñas */
+@media only screen and (max-width: 600px) {
+    /* Ajusta el tamaño del encabezado y alinea el texto */
+    .h1, .center-text {
+        font-size: 1.8em; /* Disminuye el tamaño del encabezado */
+        text-align: center; /* Centra el texto */
+        max-width: 100%; /* Ajusta el ancho máximo */
+        padding: 10px; /* Añade padding */
+    }
+
+    /* Ajusta la disposición de los contenedores */
+    .container, .main-content, .task-list, .time-container {
+        width: 100%; /* Ocupar todo el ancho disponible */
+        flex-direction: column; /* Cambia a columna en móviles */
+        align-items: center; /* Centra los elementos */
+        margin: 0; /* Elimina márgenes */
+    }
+
+    .task-list {
+        margin-top: 20px; /* Añade espacio superior */
+    }
+
+    /* Ajusta el tamaño de los inputs y botones */
+    input, button {
+        font-size: 0.9em; /* Reduce el tamaño de los inputs y botones en móviles */
+    }
 }
